@@ -1,0 +1,428 @@
+/* ===== HEADER RIGHT ===== */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* space between language and login */
+}
+
+.lang-switch {
+  background-color: #fddb3a;
+  color: #0f3460;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.lang-switch:hover {
+  background-color: #fff176;
+}
+
+.admin-text {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fddb3a;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.admin-text:hover {
+  color: #ffffff;
+}
+
+/* Fix for mobile layout */
+@media (max-width: 768px) {
+  .header-mobile {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .header-mobile .brand-title {
+    flex: 1 1 100%;
+  }
+
+  .header-mobile .lang-switch {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+}
+
+.lang-switch {
+  background-color: #fddb3a;
+  color: #0f3460;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  min-width: 80px; /* ✅ Prevent button from resizing */
+  text-align: center;
+}
+.admin-text {
+  white-space: nowrap;
+}
+.lang-switch {
+  white-space: nowrap;
+}
+
+/* ===== BASE STYLES ===== */
+body {
+  padding-top: 50px;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background-color: #0f3460;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fddb3a;
+}
+
+.header a {
+  color: #fddb3a;
+  text-decoration: none;
+}
+
+.header a:hover {
+  color: #ffffff;
+}
+
+.admin-text {
+  font-size: 16px;
+  color: #fddb3a;
+  font-weight: bold;
+}
+
+/* ===== DESKTOP HEADER ===== */
+.header-desktop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+}
+
+.header-left,
+.header-center,
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-center .nav-list {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  position: relative;
+  cursor: pointer;
+  font-weight: 500;
+  color: #fff;
+}
+
+.nav-item:hover {
+  color: #fddb3a;
+}
+
+/* ===== DROPDOWN STYLES (DESKTOP + MOBILE) ===== */
+.dropdown,
+.mobile-menu,
+.nested {
+  background-color: #16213e;
+  color: #fddb3a;
+}
+
+.dropdown,
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  min-width: 200px;
+  list-style: none;
+}
+
+.dropdown li,
+.dropdown li a,
+.mobile-menu li,
+.nested li {
+  color: #fddb3a;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  display: block;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dropdown li:hover,
+.dropdown li a:hover,
+.mobile-menu li:hover,
+.nested li:hover {
+  background-color: #0f3460;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+/* ===== NESTED SUBMENUS (Mobile Dropdowns) ===== */
+.nested {
+  margin-top: 8px;
+  padding-left: 16px;
+  border-left: 3px solid #fddb3a;
+}
+
+/* ===== MEGA MENU ===== */
+.mega-menu {
+  display: flex;
+  flex-direction: column;
+  max-height: 300px;
+  overflow-y: auto;
+  width: 250px;
+}
+
+/* ===== MOBILE HEADER ===== */
+.header-mobile {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: #0f3460;
+  flex-wrap: nowrap;         /* ✅ Do not wrap */
+  gap: 10px;                 /* Optional spacing */
+}
+
+.menu-icon {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* ===== MOBILE MENU ===== */
+.mobile-menu {
+  background-color: #16213e;
+  color: #fddb3a;
+  padding: 1rem;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* ===== MEDIA QUERIES ===== */
+.desktop-only {
+  display: flex;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+
+  .header-mobile {
+    display: flex !important;
+  }
+
+  .mobile-only {
+    display: flex !important;
+  }
+}
+.language-selector {
+  margin-right: 1rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.search-container {
+  position: relative;
+  display: inline-block;
+  width: 250px;
+}
+
+.search-input {
+  width: 75%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.suggestion-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-top: none;
+  z-index: 10;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.suggestion-dropdown li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.suggestion-dropdown li:hover {
+  background-color: #f0f0f0;
+}
+
+.suggestion-dropdown a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+.search-container {
+  margin-left: 10px;
+  position: relative;
+  display: inline-block;
+  width: 70%;         /* Make it flexible */
+  max-width: 170px;    /* Limit to 250px */
+  flex-shrink: 0;      /* Prevent shrinking on small screens */
+}
+.mega-menu {
+  display: flex;
+  flex-direction: column;
+  max-height: 300px;
+  overflow-y: auto;
+  width: 250px;
+}
+.dropdown {
+      width: 240px;
+  max-height: 300px;         /* or any desired height */
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;     /* For Firefox */
+  scrollbar-color: #fddb3a #0f3460;
+}
+.dropdown::-webkit-scrollbar {
+  width: 8px;
+}
+.dropdown::-webkit-scrollbar-thumb {
+  background-color: #fddb3a;
+  border-radius: 4px;
+}
+.dropdown::-webkit-scrollbar-track {
+  background-color: #0f3460;
+}
+/* ===== STRONG HEADINGS ===== */
+.dropdown.mega-menu li strong {
+  display: block;
+  padding: 6px 12px;
+  margin: 6px 0;
+  border-radius: 6px;
+  font-size: 15px;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+/* Normal Backgrounds */
+strong.govt { background-color: #3f51b5; }
+strong.eng  { background-color: #00796b; }
+strong.med  { background-color: #c2185b; }
+strong.def  { background-color: #5d4037; }
+strong.other { background-color: #455a64; }
+
+/* Hover Effects (Different from Normal) */
+strong.govt:hover { background-color: #5c6bc0; }
+strong.eng:hover  { background-color: #26a69a; }
+strong.med:hover  { background-color: #e91e63; }
+strong.def:hover  { background-color: #795548; }
+strong.other:hover { background-color: #607d8b; }
+@media (hover: hover) {
+  .dropdown.mega-menu li strong.govt:hover { background-color: #5c6bc0; }
+  .dropdown.mega-menu li strong.eng:hover  { background-color: #26a69a; }
+  .dropdown.mega-menu li strong.med:hover  { background-color: #e91e63; }
+  .dropdown.mega-menu li strong.def:hover  { background-color: #795548; }
+  .dropdown.mega-menu li strong.other:hover { background-color: #607d8b; }
+}
+/* ===== STRONG HEADINGS ON MOBILE (TOUCH-FRIENDLY BACKGROUNDS) ===== */
+@media (max-width: 768px) {
+  .dropdown.mega-menu li strong.govt {
+    background-color: #3f51b5;
+  }
+
+  .dropdown.mega-menu li strong.eng {
+    background-color: #00796b;
+  }
+
+  .dropdown.mega-menu li strong.med {
+    background-color: #c2185b;
+  }
+
+  .dropdown.mega-menu li strong.def {
+    background-color: #5d4037;
+  }
+
+  .dropdown.mega-menu li strong.other {
+    background-color: #455a64;
+  }
+
+  /* Optional: Simulate 'hover' feedback using active/focus */
+  .dropdown.mega-menu li strong:active,
+  .dropdown.mega-menu li strong:focus {
+    filter: brightness(1.2); /* Slightly brighter on tap */
+    outline: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .dropdown.mega-menu li strong.govt { background-color: #3f51b5; }
+  .dropdown.mega-menu li strong.eng  { background-color: #00796b; }
+  .dropdown.mega-menu li strong.med  { background-color: #c2185b; }
+  .dropdown.mega-menu li strong.def  { background-color: #5d4037; }
+  .dropdown.mega-menu li strong.other { background-color: #455a64; }
+
+  .dropdown.mega-menu li strong:active,
+  .dropdown.mega-menu li strong:focus {
+    filter: brightness(1.2);
+    outline: none;
+  }
+}

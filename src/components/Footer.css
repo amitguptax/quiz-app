@@ -1,0 +1,154 @@
+/* ===== Footer Base Styles ===== */
+footer {
+  
+  background: linear-gradient(135deg, #0f3460, #1f4068);
+  color: #ffffff;
+  padding: 40px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* Footer Content Container */
+.footer-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Flex Layout */
+.footer-main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Brand Section */
+.footer-brand h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: #fddb3a;
+}
+
+.footer-brand p {
+  font-size: 0.95rem;
+  color: #dcdcdc;
+  margin-top: 8px;
+}
+
+/* Columns Wrapper */
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+/* Footer Column */
+.footer-column {
+  flex: 1 1 220px;
+  min-width: 200px;
+}
+
+.footer-column h3 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: #fddb3a;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #fddb3a;
+  transform: translateX(4px);
+}
+
+/* Newsletter */
+.newsletter p {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  color: #e0e0e0;
+}
+
+.newsletter input {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 240px;
+}
+
+.newsletter button {
+  padding: 8px 16px;
+  background-color: #fddb3a;
+  color: #0f3460;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.newsletter button:hover {
+  background-color: #ffe95a;
+}
+
+/* ===== Responsive Styles ===== */
+@media (min-width: 992px) {
+  .footer-main {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .footer-brand {
+    flex: 1;
+    max-width: 220px;
+  }
+
+  .footer-columns {
+    flex: 4;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 30px 16px;
+  }
+
+  .footer-columns {
+    flex-direction: column;
+  }
+
+  .footer-column {
+    width: 100%;
+  }
+
+  .newsletter input {
+    max-width: 100%;
+  }
+
+  .newsletter button {
+    width: fit-content;
+  }
+}

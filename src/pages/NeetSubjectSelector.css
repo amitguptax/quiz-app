@@ -1,0 +1,69 @@
+/* NeetSubjectSelector.css */
+.neet-container {
+  padding: 1rem;
+  max-width: 600px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+.neet-container h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.neet-container label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.neet-container select {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-top: 0.25rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.neet-container button {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.neet-container button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.neet-container button:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+/* Responsive for mobile and tablets */
+@media screen and (max-width: 768px) {
+  .neet-container {
+    padding: 1rem 0.75rem;
+  }
+
+  .neet-container h2 {
+    font-size: 1.3rem;
+  }
+
+  .neet-container select {
+    font-size: 0.95rem;
+  }
+
+  .neet-container button {
+    font-size: 1rem;
+  }
+}

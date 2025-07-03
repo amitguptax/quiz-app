@@ -1,0 +1,117 @@
+/* src/pages/BiologySubjectsPage.css */
+
+.quiz-container1 {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.timer {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1e90ff;
+  margin-top: 10px;
+}
+
+.question-text {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+.options-list {
+  padding-left: 20px;
+  font-size: 17px;
+  list-style-position: inside;
+}
+
+.options-list li {
+  margin-bottom: 12px;
+}
+
+.options-list input[type="radio"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+.submit-btn,
+.next-btn {
+  background-color: #1e90ff;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.submit-btn:disabled {
+  background-color: #007bff;
+  cursor: not-allowed;
+}
+
+.explanation-box {
+  background: #fff3cd;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #ffc107;
+  margin-top: 15px;
+}
+
+.explanation-box p {
+  font-size: 16px;
+}
+
+.result-box {
+  margin-top: 20px;
+}
+
+.result-congrats {
+  padding: 15px;
+  background: #e0ffe0;
+  border: 2px solid #28a745;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  color: #155724;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.leaderboard-box {
+  margin-top: 20px;
+  background: #f0f8ff;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .question-text {
+    font-size: 18px;
+  }
+
+  .options-list {
+    font-size: 16px;
+  }
+
+  .submit-btn,
+  .next-btn {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .timer {
+    font-size: 16px;
+  }
+}

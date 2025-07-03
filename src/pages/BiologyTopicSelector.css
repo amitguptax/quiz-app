@@ -1,0 +1,170 @@
+.biology-container1 {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  padding: 40px 30px;
+  background-color: #f0fdf4;
+}
+
+.biology-title {
+  font-size: 28px;
+  color: #14532d;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.lang-toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.lang-toggle label {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.lang-toggle select {
+  padding: 8px 14px;
+  font-size: 16px;
+  border: 2px solid #3b82f6;
+  border-radius: 8px;
+  background-color: white;
+  color: #1e293b;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.lang-toggle select:hover {
+  border-color: #2563eb;
+  background-color: #eff6ff;
+}
+
+.biology-topics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.biology-section {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-title {
+  font-size: 20px;
+  color: white;
+  background-color: #16a34a;
+  padding: 10px 16px;
+  border-radius: 6px;
+  margin-bottom: 14px;
+}
+
+.subtopic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.subtopic-card {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #dbeafe;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease;
+}
+
+.subtopic-card:hover {
+  transform: translateY(-4px);
+}
+
+.subtopic-title {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 6px;
+  color: #0f172a;
+}
+
+.quiz-button {
+  background-color: #1e40af;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  align-self: flex-start;
+  transition: background-color 0.2s ease;
+  min-width: 120px;
+  text-align: center;
+}
+
+.quiz-button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .biology-topics-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .biology-section {
+    padding: 16px;
+  }
+
+  .subtopic-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .biology-title {
+    font-size: 22px;
+  }
+
+  .lang-toggle label {
+    font-size: 14px;
+  }
+
+  .lang-toggle select {
+    width: 90%;
+  }
+
+  .quiz-button {
+    width: 100%;
+    align-self: center;
+  }
+
+  .biology-container1 {
+    padding: 20px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .subtopic-title {
+    font-size: 16px;
+  }
+
+  .quiz-button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .section-title {
+    font-size: 18px;
+    padding: 8px 12px;
+  }
+}

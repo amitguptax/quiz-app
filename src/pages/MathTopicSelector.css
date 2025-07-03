@@ -1,0 +1,244 @@
+/* 🌐 Container & Title */
+.math-container1 {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  padding: 40px 30px;
+  background-color: #e6f6ff;
+}
+
+.math-title {
+  font-size: 28px;
+  color: #0f3460;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* 🌐 Language Switch */
+.lang-toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.lang-toggle select {
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+/* 📘 Topic Sections Grid (2 column on large screen) */
+.math-topics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  gap: 40px;
+  margin-top: 30px;
+}
+
+/* 📘 Each Subject Area Section */
+.math-section {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 🔷 Section Titles */
+.section-title {
+  font-size: 20px;
+  color: white;
+  background-color: #25cd71;
+  padding: 10px 16px;
+  border-radius: 6px;
+  margin-bottom: 14px;
+}
+
+/* 🧮 Subtopic Cards Grid */
+.subtopic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 20px;
+  margin-top: 10px;
+}
+
+/* 🧮 Card Styling */
+.subtopic-card {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #dbeafe;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+  transition: transform 0.2s ease;
+}
+
+.subtopic-card:hover {
+  transform: translateY(-4px);
+}
+
+/* 📝 Card Text */
+.subtopic-title {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 6px;
+  color: #0f3460;
+}
+
+.subtopic-desc {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+/* 🚀 Button */
+.quiz-button {
+  background-color: #1e90ff;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  align-self: flex-start;
+  transition: background-color 0.2s ease;
+}
+
+.quiz-button:hover {
+  background-color: #1c7cd6;
+}
+/* 🌐 Language Selector Section */
+.lang-toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.lang-heading {
+  font-size: 24px;
+  color: #1e293b;
+  margin: 0;
+  text-align: center;
+}
+
+/* 🎨 Stylish Select Dropdown */
+.lang-select {
+  padding: 8px 14px;
+  font-size: 16px;
+  border: 2px solid #3b82f6;
+  border-radius: 8px;
+  background-color: white;
+  color: #1e293b;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.lang-select:hover {
+  border-color: #2563eb;
+  background-color: #eff6ff;
+}
+@media (max-width: 768px) {
+  .math-topics-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .math-section {
+    padding: 16px;
+  }
+
+  .subtopic-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quiz-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .math-title {
+    font-size: 22px;
+  }
+
+  .lang-heading {
+    font-size: 20px;
+  }
+
+  .lang-select {
+    width: 90%;
+  }
+
+  .math-container1 {
+    padding: 20px 16px;
+  }
+}
+@media (max-width: 480px) {
+  .subtopic-title {
+    font-size: 16px;
+  }
+
+  .quiz-button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .section-title {
+    font-size: 18px;
+    padding: 8px 12px;
+  }
+}
+.math-topics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* ✅ Adjusted from 600px to 300px */
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.subtopic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* ✅ Adjusted to make two cards per row earlier */
+  gap: 20px;
+  margin-top: 10px;
+}
+@media (max-width: 599px) {
+  .math-topics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .subtopic-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.math-title {
+  font-size: 28px;
+  color: #0f3460;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.quiz-button {
+  background-color: #1e90ff;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  align-self: flex-start;
+  transition: background-color 0.2s ease;
+  min-width: 120px;
+  text-align: center;
+}
+
+@media (max-width: 599px) {
+  .quiz-button {
+    width: 100%;
+    align-self: center;
+  }
+}
