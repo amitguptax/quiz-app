@@ -43,11 +43,19 @@ const JeeAdvancedQuizPage = () => {
   const [quizFinished, setQuizFinished] = useState(false);
   const [error, setError] = useState("");
 
-  useEffect(() => {
-   import(`../data/jee/advanced/${subject}/${slug}.js`)
-      .then((mod) => setQuestions(mod.default))
-      .catch(() => setError("⚠️ Quiz not found."));
-  }, [subject, slug]);
+ useEffect(() => {
+  const modules = import.meta.glob("../data/jee/advanced/**/*.js");
+
+  const key = `../data/jee/advanced/${subject}/${slug}.js`;
+  const loader = modules[key];
+
+  if (loader) {
+    loader().then((mod) => setQuestions(mod.default));
+  } else {
+    setError("⚠️ Quiz not found.");
+  }
+}, [subject, slug]);
+
 
   useEffect(() => {
     let timer;
